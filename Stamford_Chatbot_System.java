@@ -15,7 +15,7 @@ public class Stamford_Chatbot_System {
 		System.out.println("");
 		System.out.println("HOW CAN I HELP?");
 		System.out.println("1. Course Info");
-		System.out.println("2. Exam Schedule");
+		System.out.println("2. Academic Calendar");
 		System.out.println("3. Campus Map");
 		System.out.println("4. Contact Staff");
 		System.out.println("5. Exit");	
@@ -32,6 +32,10 @@ public class Stamford_Chatbot_System {
 	
 	public void contactStaff() {
 		Stamford_Chatbot_Contact contactStaff = new Stamford_Chatbot_Contact ();
+	}
+	
+	public void showSchedule() {
+		Stamford_Chatbot_Schedule schedule = new Stamford_Chatbot_Schedule();
 	}
 	
 	

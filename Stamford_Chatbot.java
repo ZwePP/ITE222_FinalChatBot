@@ -19,7 +19,10 @@ public class Stamford_Chatbot {
 	
 			else if(user_input.equals("1") || user_input.equals("course info")) {
 				chatBot.findCourse();
-				
+			}
+			
+			else if(user_input.equals("2") || user_input.equals("academic calendar")) {
+				chatBot.showSchedule();
 			}
 			
 			
@@ -38,11 +41,13 @@ public class Stamford_Chatbot {
 			
 			System.out.print("You: ");
 			user_input = input.nextLine().toLowerCase();
+			System.out.println("");
 		
 		}
 		
 		
 		System.out.println("Bye! See you again");
+		input.close();
 
 	}
 
