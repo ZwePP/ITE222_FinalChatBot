@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Academic_Calendar {
 
-    // Helper method to determine if a year is a leap year
+   
     public static boolean isLeapYear(int year) {
         return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
     }
@@ -16,7 +16,7 @@ public class Academic_Calendar {
         } else if (month == 2) { // February
             return isLeapYear(year) ? 29 : 28;
         } else {
-            return 0; // Should not happen for valid months
+            return 0; 
         }
     }
 
@@ -52,7 +52,7 @@ public class Academic_Calendar {
 
 
     // Checks if a given date (year, month, day) is a fake holiday
-    public static boolean isFakeHoliday(int year, int month, int day) {
+    public static boolean isHoliday(int year, int month, int day) {
         if (year == 2025) {
             // New Year's Day
             if (month == 1 && day == 1) return true;
@@ -80,7 +80,7 @@ public class Academic_Calendar {
     }
 
     // Checks if a given date (year, month, day) is a fake exam date
-    public static boolean isFakeExamDate(int year, int month, int day) {
+    public static boolean isExamDate(int year, int month, int day) {
         if (year == 2025) {
             // Mid-term Exam Period (May 15 - May 22)
             if (month == 5 && day >= 15 && day <= 22) return true;
@@ -150,17 +150,17 @@ public class Academic_Calendar {
             System.out.println("2025-01-01 - New Year's Day (Holiday)");
             System.out.println("2025-02-10 to 2025-02-17 - Fake Winter Break (Holiday)");
             System.out.println("2025-04-13 to 2025-04-20 - Fake Spring Festival (Holiday)");
-            System.out.println("2025-05-15 to 2025-05-22 - Mid-term Exam Period (Fake Exam Date)");
+            System.out.println("2025-05-15 to 2025-05-22 - Mid-term Exam Period (Exam Date)");
             System.out.println("2025-07-04 to 2025-07-11 - Fake Summer Holiday (Holiday)");
             System.out.println("2025-11-20 to 2025-11-27 - Final Exam Period (Fake Exam Date)");
             System.out.println("2025-12-25 - Fake Christmas Day (Holiday)");
         } else if (year == 2026) {
             System.out.println("2026-01-01 - New Year's Day (Holiday)");
-            System.out.println("2026-02-02 to 2026-02-09 - Fake Winter Break (Holiday)");
-            System.out.println("2026-04-05 to 2026-04-12 - Fake Spring Festival (Holiday)");
-            System.out.println("2026-05-18 to 2026-05-25 - Mid-term Exam Period (Fake Exam Date)");
+            System.out.println("2026-02-02 to 2026-02-09 -  Winter Break (Holiday)");
+            System.out.println("2026-04-05 to 2026-04-12 -  Spring Festival (Holiday)");
+            System.out.println("2026-05-18 to 2026-05-25 - Mid-term Exam Period ");
             System.out.println("2026-07-06 to 2026-07-13 - Fake Summer Holiday (Holiday)");
-            System.out.println("2026-11-24 to 2026-12-01 - Final Exam Period (Fake Exam Date)");
+            System.out.println("2026-11-24 to 2026-12-01 - Final Exam Period");
             System.out.println("2026-12-25 - Fake Christmas Day (Holiday)");
         }
         System.out.println("--- End of Holidays and Exam Dates for " + year + " ---");
